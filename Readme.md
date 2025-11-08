@@ -25,4 +25,4 @@ node app.js
 RUN FRONTEND
 
 cd frontend
-npm run dev
+npm run dev# NEXORA
