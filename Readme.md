@@ -26,3 +26,7 @@ RUN FRONTEND
 
 cd frontend
 npm run dev# NEXORA
+
+<img width="1918" height="892" alt="Screenshot 2025-11-08 174534" src="https://github.com/user-attachments/assets/642d7e25-a408-40d5-8c82-6eab0a40f77c" />
+
+<img width="1892" height="892" alt="image" src="https://github.com/user-attachments/assets/e6f2d2e7-8306-40fa-afc4-c90131842329" />
