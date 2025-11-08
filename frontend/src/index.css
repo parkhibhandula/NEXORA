@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f7f7f7;
+  
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0b3961, #010910);
+  padding: 10px 0 10px 0;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 70%;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30vw;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 25vw;
+  height: 50vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.card button {
+  background: #283e51;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.card button:hover {
+  background: black;
+}
+
+.cartCard {
+  width: 25%;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.cartRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartRight button {
+  margin: 0 6px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #eee;
+  font-size: 16px;
+}
+
+.cartRight .qty {
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.subTotal {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.delBtn {
+  background: #ff4d4d !important;
+  color: white;
+}
+
+.totalBar {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  margin: 8px 0;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.cartItem button {
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.checkoutBox {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkoutBtn {
+  background: #ff6b6b;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.checkoutBtn:hover {
+  background: #ff3b3b;
+}
+
+@media (max-width:768px){
+  .container {
+    flex-direction: column;
+  }
+  .section, .cart {
+    width: 100%;
+  }
+}
+
+#brandid{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
