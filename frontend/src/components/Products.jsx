@@ -28,7 +28,7 @@ export default function Products() {
             <p>₹{item.price}</p>
           <button onClick={async () => {
   await addToCart({ productId: item._id, qty: 1 });
-  window.dispatchEvent(new Event("cartUpdated"));  // ✅ TRIGGER EVENT
+  window.dispatchEvent(new Event("cartUpdated")); 
 }}>
   Add to Cart 🛒
 </button>

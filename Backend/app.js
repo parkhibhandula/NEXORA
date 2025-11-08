@@ -12,7 +12,6 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI);
 
-// Seed products API
 app.get("/api/products", async (req,res)=>{
   let items = await Product.find();
   if(items.length === 0){
@@ -34,9 +33,9 @@ app.post("/api/products", async (req, res) => {
   res.json({ message: "Product added!", product });
 });
 
-// Add to cart
+
 app.post("/api/cart", async (req,res)=>{
-  console.log("Received:", req.body); // 👈 add this
+  console.log("Received:", req.body);
   const { productId, qty } = req.body;
   const product = await Product.findById(productId);
 
@@ -52,14 +51,14 @@ app.post("/api/cart", async (req,res)=>{
   res.json(item);
 });
 
-// Get cart + total
+
 app.get("/api/cart", async (req,res)=>{
   const cart = await Cart.find();
   const total = cart.reduce((sum,i)=> sum + i.price*i.qty, 0);
   res.json({ cart, total });
 });
 
-// Remove item
+
 app.delete("/api/cart/:id", async (req,res)=>{
   await Cart.findByIdAndDelete(req.params.id);
   res.json({msg:"Removed"});
@@ -81,7 +80,7 @@ app.put("/api/cart/:id", async (req, res) => {
   }
 });
 
-// Mock Checkout
+
 app.post("/api/checkout", async (req,res)=>{
   const cart = await Cart.find();
   const total = cart.reduce((s,i)=> s + i.price*i.qty, 0);
